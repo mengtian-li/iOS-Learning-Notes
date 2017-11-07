@@ -39,6 +39,16 @@
     let redRectView = UIView(frame: CGRect(x: 20, y: 20, width: 20, height: 20))
     redRectView.backgroundColor = .red
     lightBlurEffectView.contentView.addSubview(redRectView)
+
+    let vibrancyEffect = UIVibrancyEffect(blurEffect: lightBlurEffect)
+    let vibrancyEffectView = UIVisualEffectView(effect: vibrancyEffect)
+    vibrancyEffectView.frame = CGRect(x: view.bounds.size.width/2.0, y: 0, width: view.bounds.size.width/2.0, height: view.bounds.size.height/2.0)
+    let label = UILabel(frame:CGRect(x: 0, y: 0, width: 100, height: 100))
+    label.text = "Hello World"
+    label.tintColor = .yellow   
+vibrancyEffectView.contentView.addSubview(label)
+    lightBlurEffectView.contentView.addSubview(vibrancyEffectView)
+
 ```
 
 ## 
